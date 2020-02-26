@@ -17,6 +17,7 @@
 		1FA29CFF23D40F6800CB11EB /* ConcentrationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA29CFE23D40F6800CB11EB /* ConcentrationUITests.swift */; };
 		1FA29D0D23D415EF00CB11EB /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA29D0C23D415EF00CB11EB /* Concentration.swift */; };
 		1FA29D0F23D416A800CB11EB /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA29D0E23D416A800CB11EB /* Card.swift */; };
+		1FD6E107240523A8004AB102 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD6E106240523A8004AB102 /* Theme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1FA29D0023D40F6800CB11EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FA29D0C23D415EF00CB11EB /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = SOURCE_ROOT; };
 		1FA29D0E23D416A800CB11EB /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		1FD6E106240523A8004AB102 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				1FA29CE023D40F6400CB11EB /* ViewController.swift */,
 				1FA29CE223D40F6400CB11EB /* Main.storyboard */,
 				1FA29CEA23D40F6800CB11EB /* Info.plist */,
+				1FD6E106240523A8004AB102 /* Theme.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 				1FA29CE123D40F6400CB11EB /* ViewController.swift in Sources */,
 				1FA29D0D23D415EF00CB11EB /* Concentration.swift in Sources */,
 				1FA29D0F23D416A800CB11EB /* Card.swift in Sources */,
+				1FD6E107240523A8004AB102 /* Theme.swift in Sources */,
 				1FA29CDD23D40F6400CB11EB /* AppDelegate.swift in Sources */,
 				1FA29CDF23D40F6400CB11EB /* SceneDelegate.swift in Sources */,
 			);

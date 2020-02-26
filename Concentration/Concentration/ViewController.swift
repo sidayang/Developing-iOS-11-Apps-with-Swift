@@ -8,29 +8,55 @@
 
 import UIKit
 
+let themes = [
+    Theme(backgroundColor: UIColor.white, cardBackColor: UIColor.green, emojis: ["😃", "🥶", "😡", "🤢", "👽", "🤠", "🤡", "🥰", "🤪", "😎"]),
+    Theme(backgroundColor: UIColor.black, cardBackColor: UIColor.orange, emojis: ["🐷", "🐸", "🐵", "🐶", "🐴", "🐳", "🐙", "🐠", "🐯", "🦊"]),
+    Theme(backgroundColor: UIColor.yellow, cardBackColor: UIColor.cyan, emojis: ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱"]),
+]
+
 class ViewController: UIViewController {
-    // only init when get accessed, cannot have didSet
-    lazy var game = Concentration(numberOfPairsOfCards: (cardButtons.count + 1) / 2)
+    @IBOutlet var flipCountLabel: UILabel!
     
-    var flipCount = 0 {
-        didSet {
-            flipCountLabel.text = "Flips: \(flipCount)"
-        }
-    }
-    
-    @IBOutlet weak var flipCountLabel: UILabel!
+    @IBOutlet var scoreLabel: UILabel!
     
     @IBOutlet var cardButtons: [UIButton]!
     
-
+    @IBAction func handleStartNewGame(_ sender: UIButton) {
+        viewDidLoad()
+    }
+    
     @IBAction func touchCard(_ sender: UIButton) {
-        flipCount += 1
         if let cardNumber = cardButtons.firstIndex(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModal()
         } else {
             print("chosen card was not in cardButtons")
         }
+    }
+    
+    var game: Concentration!
+    
+    var appliedTheme: Theme!
+    
+    var numberOfPairsOfCards: Int {
+        assert(cardButtons.count % 2 == 0, "Number of cards must be a even number")
+        return cardButtons.count / 2
+    }
+    
+    var emoji: [Int: String]!
+    
+    override func viewDidLoad() {
+        game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
+        emoji = [Int: String]()
+        applyTheme()
+        updateViewFromModal()
+    }
+    
+    func applyTheme() {
+        appliedTheme = themes.filter { (theme: Theme) -> Bool in
+            theme.identifier != appliedTheme?.identifier
+        }.randomElement()!
+        view.backgroundColor = appliedTheme.backgroundColor
     }
     
     func updateViewFromModal() {
@@ -43,21 +69,19 @@ class ViewController: UIViewController {
             } else {
                 button.setTitle("", for: .normal)
                 button.backgroundColor =
-                    card.isMatched ? #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 0) : #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1)
+                    card.isMatched ? #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 0) : appliedTheme.cardBackColor
             }
         }
+        flipCountLabel.text = "Flips: \(game.flipCount)"
+        scoreLabel.text = "Score: \(game.score)"
     }
-    
-    var emojiChoices = ["🍎", "🎃", "👻", "🍭", "😈", "🙀", "🍬", "😱", "😨", "👽"]
-    
-    var emoji = [Int: String]()
+
     
     func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, emojiChoices.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoices.count)))
-            emoji[card.identifier] = emojiChoices.remove(at: randomIndex)
+        if emoji[card.identifier] == nil, appliedTheme.emojis.count > 0 {
+            let randomIndex = Int(arc4random_uniform(UInt32(appliedTheme.emojis.count)))
+            emoji[card.identifier] = appliedTheme.emojis.remove(at: randomIndex)
         }
-        
         return emoji[card.identifier] ?? "?"
     }
 }
