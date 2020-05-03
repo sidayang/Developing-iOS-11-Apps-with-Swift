@@ -13,7 +13,7 @@ struct Theme {
     var identifier: Int
     var backgroundColor: UIColor
     var cardBackColor: UIColor
-    var emojis: [String]
+    var emojis: String
     
     static var identifierFactory = 0
 
@@ -22,7 +22,7 @@ struct Theme {
         return identifierFactory
     }
 
-    init(backgroundColor: UIColor, cardBackColor: UIColor, emojis: [String]) {
+    init(backgroundColor: UIColor, cardBackColor: UIColor, emojis: String) {
         self.backgroundColor = backgroundColor
         self.cardBackColor = cardBackColor
         self.emojis = emojis

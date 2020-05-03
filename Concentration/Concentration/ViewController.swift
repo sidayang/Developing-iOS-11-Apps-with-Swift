@@ -9,23 +9,23 @@
 import UIKit
 
 let themes = [
-    Theme(backgroundColor: UIColor.white, cardBackColor: UIColor.green, emojis: ["😃", "🥶", "😡", "🤢", "👽", "🤠", "🤡", "🥰", "🤪", "😎"]),
-    Theme(backgroundColor: UIColor.black, cardBackColor: UIColor.orange, emojis: ["🐷", "🐸", "🐵", "🐶", "🐴", "🐳", "🐙", "🐠", "🐯", "🦊"]),
-    Theme(backgroundColor: UIColor.yellow, cardBackColor: UIColor.cyan, emojis: ["⚽️", "🏀", "🏈", "⚾️", "🥎", "🎾", "🏐", "🏉", "🥏", "🎱"]),
+    Theme(backgroundColor: UIColor.white, cardBackColor: UIColor.green, emojis: "😃🥶😡🤢👽🤠🤡🥰🤪😎"),
+    Theme(backgroundColor: UIColor.black, cardBackColor: UIColor.orange, emojis: "🐷🐸🐵🐶🐴🐳🐙🐠🐯🦊"),
+    Theme(backgroundColor: UIColor.yellow, cardBackColor: UIColor.cyan, emojis: "⚽️🏀🏈⚾️🥎🎾🏐🏉🥏🎱"),
 ]
 
 class ViewController: UIViewController {
-    @IBOutlet var flipCountLabel: UILabel!
+    @IBOutlet private var flipCountLabel: UILabel!
     
-    @IBOutlet var scoreLabel: UILabel!
+    @IBOutlet private var scoreLabel: UILabel!
     
-    @IBOutlet var cardButtons: [UIButton]!
+    @IBOutlet private var cardButtons: [UIButton]!
     
-    @IBAction func handleStartNewGame(_ sender: UIButton) {
+    @IBAction private func handleStartNewGame(_ sender: UIButton) {
         viewDidLoad()
     }
     
-    @IBAction func touchCard(_ sender: UIButton) {
+    @IBAction private func touchCard(_ sender: UIButton) {
         if let cardNumber = cardButtons.firstIndex(of: sender) {
             game.chooseCard(at: cardNumber)
             updateViewFromModal()
@@ -34,32 +34,33 @@ class ViewController: UIViewController {
         }
     }
     
-    var game: Concentration!
+    private var game: Concentration!
     
-    var appliedTheme: Theme!
+    private(set) var appliedTheme: Theme!
     
-    var numberOfPairsOfCards: Int {
+    private var numberOfPairsOfCards: Int {
         assert(cardButtons.count % 2 == 0, "Number of cards must be a even number")
         return cardButtons.count / 2
     }
     
-    var emoji: [Int: String]!
+    private var emoji: [Card: String]!
     
     override func viewDidLoad() {
         game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
-        emoji = [Int: String]()
+        emoji = [Card: String]()
         applyTheme()
         updateViewFromModal()
+        super.viewDidLoad()
     }
     
-    func applyTheme() {
+    private func applyTheme() {
         appliedTheme = themes.filter { (theme: Theme) -> Bool in
             theme.identifier != appliedTheme?.identifier
         }.randomElement()!
         view.backgroundColor = appliedTheme.backgroundColor
     }
     
-    func updateViewFromModal() {
+    private func updateViewFromModal() {
         for index in cardButtons.indices {
             let button = cardButtons[index]
             let card = game.cards[index]
@@ -72,16 +73,32 @@ class ViewController: UIViewController {
                     card.isMatched ? #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 0) : appliedTheme.cardBackColor
             }
         }
-        flipCountLabel.text = "Flips: \(game.flipCount)"
-        scoreLabel.text = "Score: \(game.score)"
+        let attributes: [NSAttributedString.Key:Any] = [
+            .strokeWidth: 5.0,
+            .strokeColor: #colorLiteral(red: 1, green: 0.5763723254, blue: 0, alpha: 1),
+        ]
+        flipCountLabel.attributedText = NSAttributedString(string: "Flips: \(game.flipCount)", attributes: attributes)
+        scoreLabel.attributedText = NSAttributedString(string: "Score: \(game.score)", attributes: attributes)
     }
-
     
-    func emoji(for card: Card) -> String {
-        if emoji[card.identifier] == nil, appliedTheme.emojis.count > 0 {
-            let randomIndex = Int(arc4random_uniform(UInt32(appliedTheme.emojis.count)))
-            emoji[card.identifier] = appliedTheme.emojis.remove(at: randomIndex)
+    private func emoji(for card: Card) -> String {
+        if emoji[card] == nil, appliedTheme.emojis.count > 0 {
+            let randomIndex = appliedTheme.emojis.index(appliedTheme.emojis.startIndex, offsetBy: appliedTheme.emojis.count.arc4random)
+            emoji[card] = String(appliedTheme.emojis.remove(at: randomIndex))
         }
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
+    }
+}
+
+
+extension Int {
+    var arc4random: Int {
+        if self > 0 {
+            return Int(arc4random_uniform(UInt32(self)))
+        } else if self < 0 {
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        } else {
+            return 0
+        }
     }
 }

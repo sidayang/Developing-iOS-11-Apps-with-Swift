@@ -8,14 +8,24 @@
 
 import Foundation
 
-class Concentration {
-    var cards = [Card]()
-    var flipedUpHistoryInFailedMatch = Set<Int>()
-    var indexOfOneAndOnlyFaceUpCard: Int?
-    var score = 0
-    var flipCount = 0
+struct Concentration {
+    private(set) var cards = [Card]()
+    private var flipedUpHistoryInFailedMatch = Set<Card>()
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
+        get {
+            return cards.indices.filter{ cards[$0].isFaceUp }.oneAndTheOnlyOne
+        }
+        set {
+            for index in cards.indices {
+                cards[index].isFaceUp = (index == newValue)
+            }
+        }
+    }
+    private(set) var score = 0
+    private(set) var flipCount = 0
     
-    func chooseCard(at index: Int) {
+    mutating func chooseCard(at index: Int) {
+        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         if !cards[index].isMatched {
             flipCount += 1
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
@@ -26,44 +36,47 @@ class Concentration {
         }
     }
     
-    func flipOneCard(at index: Int) {
-        for flipDownIndex in cards.indices {
-            cards[flipDownIndex].isFaceUp = false
-        }
-        cards[index].isFaceUp = true
+    mutating func flipOneCard(at index: Int) {
         indexOfOneAndOnlyFaceUpCard = index
     }
     
-    func flipTheOtherOneCard(at index: Int, matchIndex: Int) {
-        if cards[matchIndex].identifier == cards[index].identifier {
+    mutating func flipTheOtherOneCard(at index: Int, matchIndex: Int) {
+        if cards[matchIndex] == cards[index] {
             successfulMatch(at: index, matchIndex: matchIndex)
         } else {
             failedMatch(at: index, matchIndex: matchIndex)
         }
         cards[index].isFaceUp = true
-        indexOfOneAndOnlyFaceUpCard = nil
     }
     
-    func successfulMatch(at index: Int, matchIndex: Int) {
+    mutating func successfulMatch(at index: Int, matchIndex: Int) {
         cards[matchIndex].isMatched = true
         cards[index].isMatched = true
         score += 2
     }
     
-    func failedMatch(at index: Int, matchIndex: Int) {
+    mutating func failedMatch(at index: Int, matchIndex: Int) {
         [index, matchIndex].forEach({
             (currentIndex: Int) in
-            if flipedUpHistoryInFailedMatch.contains(currentIndex) { score -= 1 }
-            flipedUpHistoryInFailedMatch.insert(cards[currentIndex].identifier)
+            if flipedUpHistoryInFailedMatch.contains(cards[currentIndex]) { score -= 1 }
+            flipedUpHistoryInFailedMatch.insert(cards[currentIndex])
         })
     }
     
     init(numberOfPairsOfCards: Int) {
+        assert(numberOfPairsOfCards > 0, "Concentration.init(\(numberOfPairsOfCards)): you must have at least one pair of cards")
         for _ in 1...numberOfPairsOfCards {
             let card = Card()
             // deep copy as Card is a struct
             cards += [card, card]
         }
         cards.shuffle()
+    }
+}
+
+
+extension Collection {
+    var oneAndTheOnlyOne: Element? {
+        return count == 1 ? first : nil
     }
 }

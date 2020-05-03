@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Set" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cpe-t3-csk">
+                                <rect key="frame" x="16" y="16" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dah-dz-0rb" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iz4-t5-7Wm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vlo-el-v8I" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="noG-5i-Cal"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkW-kB-66D" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UxQ-54-drt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tsd-b6-heI" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hSz-em-2CY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CI8-BZ-FOQ">
+                                <rect key="frame" x="16" y="284" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhi-Z5-dQk" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ygs-eB-FiZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhT-P3-5oB" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fos-R5-JVw"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8e-5h-yNT" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gVG-cj-FP3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQo-m9-XaJ" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HFI-ul-7B7"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="qLo-7X-qfi">
+                                <rect key="frame" x="16" y="351" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJE-Yp-0tK" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QFe-cd-eRA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adt-ws-Eov" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wXP-lh-826"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VnS-tD-ced" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bg8-iJ-Ol0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9p-gl-8Wb" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D5N-97-7mY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="sWc-QS-IhE">
+                                <rect key="frame" x="16" y="217" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R15-rc-qEY" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xHm-z5-ft7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iZT-yf-VDh" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Daj-hV-d1Y"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TuX-kD-MBc" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OzN-od-tfK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p87-iA-qT0" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BQn-V4-Ped"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="OER-2p-Tbs">
+                                <rect key="frame" x="16" y="150" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXv-Sp-Uyx" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J0b-za-eHl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BH-fF-Ggd" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ARe-Lo-JII"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzN-90-74L" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="48m-Hq-csG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mn-Pr-rzP" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nwv-rA-MVt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="rrX-lC-9Id">
+                                <rect key="frame" x="16" y="83" width="343" height="51"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV3-lq-Qu7" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ucs-ek-gMf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8q-b4-jZd" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="88" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5I0-H0-XmT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZx-p8-c25" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="175.5" y="0.0" width="80" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OU9-Bk-vxM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Al5-WB-e29" customClass="CardUIButton" customModule="Set" customModuleProvider="target">
+                                        <rect key="frame" x="263.5" y="0.0" width="79.5" height="51"/>
+                                        <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <connections>
+                                            <action selector="handleTouchCardUIButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fRf-0l-vNN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tay-7T-nsr">
+                                <rect key="frame" x="150" y="584.5" width="75" height="30"/>
+                                <state key="normal" title="New Game"/>
+                                <connections>
+                                    <action selector="handleNewGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ig3-FK-JeB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3Z-oV-2Pd">
+                                <rect key="frame" x="123.5" y="538.5" width="128" height="30"/>
+                                <state key="normal" title="Deal 3 More Cards"/>
+                                <connections>
+                                    <action selector="handleDealThreeMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t98-SX-CcK"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8z-jF-PYB">
+                                <rect key="frame" x="161" y="630.5" width="53.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rrX-lC-9Id" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="11w-TZ-Xkz"/>
+                            <constraint firstItem="OER-2p-Tbs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="2bs-pK-esy"/>
+                            <constraint firstItem="qLo-7X-qfi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="46d-gR-we3"/>
+                            <constraint firstItem="qLo-7X-qfi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="553-Uq-MN3"/>
+                            <constraint firstItem="OER-2p-Tbs" firstAttribute="top" secondItem="rrX-lC-9Id" secondAttribute="bottom" constant="16" id="5JF-xN-BgV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cpe-t3-csk" secondAttribute="trailing" constant="16" id="5r7-Ka-tmv"/>
+                            <constraint firstItem="sWc-QS-IhE" firstAttribute="top" secondItem="OER-2p-Tbs" secondAttribute="bottom" constant="16" id="84u-qL-2LI"/>
+                            <constraint firstItem="S8z-jF-PYB" firstAttribute="top" secondItem="Tay-7T-nsr" secondAttribute="bottom" constant="16" id="9du-li-qRd"/>
+                            <constraint firstItem="qLo-7X-qfi" firstAttribute="top" secondItem="CI8-BZ-FOQ" secondAttribute="bottom" constant="16" id="CvZ-eC-UrK"/>
+                            <constraint firstItem="Tay-7T-nsr" firstAttribute="top" secondItem="R3Z-oV-2Pd" secondAttribute="bottom" constant="16" id="EPv-ly-rOQ"/>
+                            <constraint firstItem="cpe-t3-csk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="GpE-iZ-yH5"/>
+                            <constraint firstItem="rrX-lC-9Id" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="QZU-t4-Jgc"/>
+                            <constraint firstItem="OER-2p-Tbs" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="XDR-Rj-DhS"/>
+                            <constraint firstItem="Tay-7T-nsr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ygc-GV-AJH"/>
+                            <constraint firstItem="cpe-t3-csk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Z7T-C2-qYs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="S8z-jF-PYB" secondAttribute="bottom" constant="16" id="alx-aE-jBN"/>
+                            <constraint firstItem="sWc-QS-IhE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="knf-0v-63y"/>
+                            <constraint firstItem="CI8-BZ-FOQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ob6-cR-KiK"/>
+                            <constraint firstItem="CI8-BZ-FOQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="okC-sL-RHy"/>
+                            <constraint firstItem="R3Z-oV-2Pd" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="pr1-FR-UGW"/>
+                            <constraint firstItem="CI8-BZ-FOQ" firstAttribute="top" secondItem="sWc-QS-IhE" secondAttribute="bottom" constant="16" id="tWJ-XK-aZr"/>
+                            <constraint firstItem="sWc-QS-IhE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="teC-mc-ulf"/>
+                            <constraint firstItem="S8z-jF-PYB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="wMc-dI-Xgf"/>
+                            <constraint firstItem="rrX-lC-9Id" firstAttribute="top" secondItem="cpe-t3-csk" secondAttribute="bottom" constant="16" id="xh1-Ex-jTy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dealThreeMoreButton" destination="R3Z-oV-2Pd" id="NPX-W8-lRc"/>
+                        <outlet property="scoreLabel" destination="S8z-jF-PYB" id="9Zx-3y-7rS"/>
+                        <outletCollection property="CardUIButtons" destination="nzN-90-74L" collectionClass="NSMutableArray" id="bOE-0M-r7u"/>
+                        <outletCollection property="CardUIButtons" destination="dah-dz-0rb" collectionClass="NSMutableArray" id="rS4-eL-L8I"/>
+                        <outletCollection property="CardUIButtons" destination="Tsd-b6-heI" collectionClass="NSMutableArray" id="pWo-7u-5vG"/>
+                        <outletCollection property="CardUIButtons" destination="Vlo-el-v8I" collectionClass="NSMutableArray" id="sGE-w2-EsK"/>
+                        <outletCollection property="CardUIButtons" destination="dkW-kB-66D" collectionClass="NSMutableArray" id="sJa-If-NQg"/>
+                        <outletCollection property="CardUIButtons" destination="lV3-lq-Qu7" collectionClass="NSMutableArray" id="mS7-xh-noS"/>
+                        <outletCollection property="CardUIButtons" destination="e8q-b4-jZd" collectionClass="NSMutableArray" id="Tsh-Mm-Wee"/>
+                        <outletCollection property="CardUIButtons" destination="QZx-p8-c25" collectionClass="NSMutableArray" id="Udk-dT-wcb"/>
+                        <outletCollection property="CardUIButtons" destination="Al5-WB-e29" collectionClass="NSMutableArray" id="w63-YD-qIN"/>
+                        <outletCollection property="CardUIButtons" destination="HXv-Sp-Uyx" collectionClass="NSMutableArray" id="Y8A-Yb-QBf"/>
+                        <outletCollection property="CardUIButtons" destination="8BH-fF-Ggd" collectionClass="NSMutableArray" id="DRn-zZ-gCS"/>
+                        <outletCollection property="CardUIButtons" destination="3mn-Pr-rzP" collectionClass="NSMutableArray" id="EdG-fR-qx6"/>
+                        <outletCollection property="CardUIButtons" destination="p87-iA-qT0" collectionClass="NSMutableArray" id="SXJ-DV-Gv3"/>
+                        <outletCollection property="CardUIButtons" destination="TuX-kD-MBc" collectionClass="NSMutableArray" id="7hq-i2-YhD"/>
+                        <outletCollection property="CardUIButtons" destination="iZT-yf-VDh" collectionClass="NSMutableArray" id="hOI-he-8O1"/>
+                        <outletCollection property="CardUIButtons" destination="R15-rc-qEY" collectionClass="NSMutableArray" id="Uvx-ds-EUp"/>
+                        <outletCollection property="CardUIButtons" destination="dhi-Z5-dQk" collectionClass="NSMutableArray" id="Aid-bP-3nr"/>
+                        <outletCollection property="CardUIButtons" destination="VhT-P3-5oB" collectionClass="NSMutableArray" id="zU0-6K-WwV"/>
+                        <outletCollection property="CardUIButtons" destination="M8e-5h-yNT" collectionClass="NSMutableArray" id="DXP-SI-2HQ"/>
+                        <outletCollection property="CardUIButtons" destination="TQo-m9-XaJ" collectionClass="NSMutableArray" id="L0e-cw-jFQ"/>
+                        <outletCollection property="CardUIButtons" destination="A9p-gl-8Wb" collectionClass="NSMutableArray" id="Vgg-Hc-AsH"/>
+                        <outletCollection property="CardUIButtons" destination="VnS-tD-ced" collectionClass="NSMutableArray" id="hni-oX-LsI"/>
+                        <outletCollection property="CardUIButtons" destination="adt-ws-Eov" collectionClass="NSMutableArray" id="AnL-DQ-6wf"/>
+                        <outletCollection property="CardUIButtons" destination="WJE-Yp-0tK" collectionClass="NSMutableArray" id="3Vc-IE-Z8X"/>
+                        <outletCollection property="cardUIButtons" destination="WJE-Yp-0tK" collectionClass="NSMutableArray" id="DY9-Lo-QRi"/>
+                        <outletCollection property="cardUIButtons" destination="adt-ws-Eov" collectionClass="NSMutableArray" id="S9q-hY-bzP"/>
+                        <outletCollection property="cardUIButtons" destination="VnS-tD-ced" collectionClass="NSMutableArray" id="C2z-zg-B9L"/>
+                        <outletCollection property="cardUIButtons" destination="A9p-gl-8Wb" collectionClass="NSMutableArray" id="eQR-KX-1au"/>
+                        <outletCollection property="cardUIButtons" destination="dhi-Z5-dQk" collectionClass="NSMutableArray" id="lxM-3d-hDA"/>
+                        <outletCollection property="cardUIButtons" destination="VhT-P3-5oB" collectionClass="NSMutableArray" id="RUD-gN-jnT"/>
+                        <outletCollection property="cardUIButtons" destination="M8e-5h-yNT" collectionClass="NSMutableArray" id="0uZ-GA-pbz"/>
+                        <outletCollection property="cardUIButtons" destination="TQo-m9-XaJ" collectionClass="NSMutableArray" id="Ds9-hG-qzU"/>
+                        <outletCollection property="cardUIButtons" destination="p87-iA-qT0" collectionClass="NSMutableArray" id="piM-wa-xgj"/>
+                        <outletCollection property="cardUIButtons" destination="TuX-kD-MBc" collectionClass="NSMutableArray" id="R0i-qh-R4g"/>
+                        <outletCollection property="cardUIButtons" destination="iZT-yf-VDh" collectionClass="NSMutableArray" id="TgZ-RJ-XZK"/>
+                        <outletCollection property="cardUIButtons" destination="R15-rc-qEY" collectionClass="NSMutableArray" id="eOA-NO-2C5"/>
+                        <outletCollection property="cardUIButtons" destination="3mn-Pr-rzP" collectionClass="NSMutableArray" id="2aO-7L-EcY"/>
+                        <outletCollection property="cardUIButtons" destination="nzN-90-74L" collectionClass="NSMutableArray" id="ZdA-dR-ck4"/>
+                        <outletCollection property="cardUIButtons" destination="8BH-fF-Ggd" collectionClass="NSMutableArray" id="yBU-o3-GqN"/>
+                        <outletCollection property="cardUIButtons" destination="HXv-Sp-Uyx" collectionClass="NSMutableArray" id="x1b-2G-oj9"/>
+                        <outletCollection property="cardUIButtons" destination="Al5-WB-e29" collectionClass="NSMutableArray" id="499-W2-Uyk"/>
+                        <outletCollection property="cardUIButtons" destination="QZx-p8-c25" collectionClass="NSMutableArray" id="BVu-9Z-6Xc"/>
+                        <outletCollection property="cardUIButtons" destination="e8q-b4-jZd" collectionClass="NSMutableArray" id="dNC-z4-aSZ"/>
+                        <outletCollection property="cardUIButtons" destination="lV3-lq-Qu7" collectionClass="NSMutableArray" id="S3w-hU-RdV"/>
+                        <outletCollection property="cardUIButtons" destination="Tsd-b6-heI" collectionClass="NSMutableArray" id="aRA-4r-WYu"/>
+                        <outletCollection property="cardUIButtons" destination="dkW-kB-66D" collectionClass="NSMutableArray" id="GRh-Cq-b0P"/>
+                        <outletCollection property="cardUIButtons" destination="Vlo-el-v8I" collectionClass="NSMutableArray" id="9CW-Kg-lCK"/>
+                        <outletCollection property="cardUIButtons" destination="dah-dz-0rb" collectionClass="NSMutableArray" id="1cL-Dw-gsy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10492" y="72"/>
+        </scene>
+    </scenes>
+</document>
